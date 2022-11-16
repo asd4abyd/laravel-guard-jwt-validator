@@ -1,0 +1,32 @@
+{
+  "name": "dweik/laravel-guard-jwt-validator",
+  "description": "Laravel guard for validate JWT token",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "laravel", "guard", "jwt", "validator","rsa", "microservice", "middleware"
+  ],
+  "authors": [
+    {
+      "name": "Abdelqader osama",
+      "email": "abdelqader.aldweik@tarjama.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "laravel/framework": "^8.19"
+  },
+  "autoload": {
+    "psr-4": {
+      "LaravelGuard\\JWT\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaravelGuard\\JWT\\GuardServiceProvider"
+      ]
+    }
+  }
+}
