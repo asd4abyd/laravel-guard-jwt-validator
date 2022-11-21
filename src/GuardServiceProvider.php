@@ -28,7 +28,7 @@ class GuardServiceProvider extends ServiceProvider
 
             $request = $app['request'];
 
-            $accessToken = JWT::getToken($request);
+            $accessToken = JWT::getToken($request, true);
 
             $jwt = new JWT(config('jwt.algo'), config('jwt.keys.public'));
 

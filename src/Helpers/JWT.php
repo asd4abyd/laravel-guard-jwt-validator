@@ -27,8 +27,8 @@ class JWT
 
     public static function getToken(Request $request, $exception = false)
     {
-        $token = $request->header('Authorization', ' ') . ' ';
-        $token = explode(' ', $token, 2);
+        $token = $request->header('Authorization', ' ');
+        $token = explode(' ', trim($token), 2);
 
         if (count($token) != 2) {
             if ($exception) {
