@@ -3,7 +3,7 @@
   "description": "Laravel guard for validate JWT token",
   "minimum-stability": "stable",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "laravel", "guard", "jwt", "validator","rsa", "microservice", "middleware"
   ],
