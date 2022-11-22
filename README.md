@@ -51,6 +51,9 @@ you can add guard to middleware or use it as default guard by changing the `defa
 
 ### Changelog
 
+V1.0.1
+* [bugfix] return an exception `Token not valid` if token not passed
+
 V1.0.0
 * Validate the JWT token
 * Create user if is not exists by using the JWT payload values
