@@ -91,10 +91,6 @@ class GuardServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (env('APP_ENV') == 'production') {
-            URL::forceScheme('https');
-            $this->app['request']->server->set('HTTPS', 'on');
-        }
 
         $this->publishes([
             __DIR__.'/../config/jwt.php' => config_path('jwt.php')
