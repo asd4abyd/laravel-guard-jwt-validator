@@ -15,7 +15,8 @@
   ],
   "require": {
     "php": ">=7.4",
-    "laravel/framework": "^8.19"
+    "laravel/framework": "^8.19",
+    "ext-openssl": "*"
   },
   "autoload": {
     "psr-4": {

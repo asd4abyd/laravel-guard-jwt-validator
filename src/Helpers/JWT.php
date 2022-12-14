@@ -124,14 +124,15 @@ class JWT
 
         $data = $this->urlsafeB64Decode($data);
 
-        if (in_array($method, ['RSA', 'RSA224', 'RSA256', 'RSA384', 'RSA512'])) {
-            return $this->rsaAlog($msg, $key, $data);
+        if (in_array($method, ['RSA', 'RSA224', 'RSA256', 'RSA384', 'RSA512', 'RS', 'RS224', 'RS256', 'RS384', 'RS512'])) {
+
+            return $this->rsaAlog($msg, $key, $data, $methods[$method]);
         }
 
         return $data == hash_hmac($methods[$method], $msg, $key, true);
     }
 
-    private function rsaAlog($msg, $key, $data)
+    private function rsaAlog($msg, $key, $data, $rsaAlgo)
     {
         $keyPrivatePassword = null;
         $keyPublicPath = $key;
@@ -147,7 +148,7 @@ class JWT
 
         $resPublicKey = openssl_pkey_get_public($chavePublicaString);
 
-        $result = openssl_verify($msg, $data, $resPublicKey, OPENSSL_ALGO_SHA256);
+        $result = openssl_verify($msg, $data, $resPublicKey, $rsaAlgo);
 
         openssl_free_key($resPublicKey);
 
