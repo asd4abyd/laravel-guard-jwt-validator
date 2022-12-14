@@ -107,6 +107,11 @@ class JWT
             'RSA256' => OPENSSL_ALGO_SHA256,
             'RSA384' => OPENSSL_ALGO_SHA384,
             'RSA512' => OPENSSL_ALGO_SHA512,
+            'RS' => OPENSSL_ALGO_SHA1,
+            'RS224' => OPENSSL_ALGO_SHA224,
+            'RS256' => OPENSSL_ALGO_SHA256,
+            'RS384' => OPENSSL_ALGO_SHA384,
+            'RS512' => OPENSSL_ALGO_SHA512,
         );
 
         $method = $this->algo;
